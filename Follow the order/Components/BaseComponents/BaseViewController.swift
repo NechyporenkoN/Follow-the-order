@@ -20,18 +20,12 @@ class BaseViewController: UIViewController {
 		return imageView
 	}()
 	
-//	override func loadView() {
-//		super.loadView()
-//		view.addSubview(backgroundImageView)
-//		setupConstraints()
-//	}
-		override func viewDidLoad() {
-			super.viewDidLoad()
-	
-			view.addSubview(backgroundImageView)
-			setupConstraints()
-		}
-	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		view.addSubview(backgroundImageView)
+		setupConstraints()
+	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)

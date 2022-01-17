@@ -14,12 +14,14 @@ class Application {
 	
 	private init() {}
 	
-	var backgroundImageName: String? {
+	let link = "http://yerkee.com/api/fortune"
+	
+	var mainBackground: String? {
 		get {
-			return UserDefaults.standard.string(forKey: UserDefaultsKey.backgroundImageName.rawValue)
+			return UserDefaults.standard.string(forKey: UserDefaultsKey.mainBackground.rawValue)
 		}
 		set(newValue){
-			UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.backgroundImageName.rawValue)
+			UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.mainBackground.rawValue)
 		}
 	}
 	
@@ -34,6 +36,6 @@ class Application {
 }
 
 enum UserDefaultsKey: String {
-	case backgroundImageName
+	case mainBackground
 	case totalScore
 }

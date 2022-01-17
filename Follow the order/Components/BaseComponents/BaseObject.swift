@@ -21,10 +21,10 @@ class BaseObject: UIControl {
 		return imageView
 	}()
 	
-	 override init(frame: CGRect) {
+	override init(frame: CGRect) {
 		super.init(frame: frame)
-		 self.addSubview(imageView)
-		 setupConstraints()
+		self.addSubview(imageView)
+		setupConstraints()
 	}
 	
 	required init?(coder: NSCoder) {
@@ -41,7 +41,7 @@ class BaseObject: UIControl {
 	}
 }
 
-enum MainObject: String {
+enum MainObject: CaseIterable {
 	case apple
 	case balloon
 	case wheel

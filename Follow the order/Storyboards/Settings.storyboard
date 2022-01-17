@@ -1,25 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="Follow_the_order" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yp-1t-12j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="SUl-Vz-oap"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Atm-ce-l8n"/>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WXy-Rp-zpu">
+                                <rect key="frame" x="20" y="756" width="374" height="86"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ykD-m1-RFB">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26"/>
+                                    </pageControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="S2k-5D-501">
+                                        <rect key="frame" x="0.0" y="42" width="374" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u69-aO-49R" customClass="BaseButton" customModule="Follow_the_order" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="HUB-AK-ser"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JDH-dt-pT1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC6-08-eq8" customClass="BaseButton" customModule="Follow_the_order" customModuleProvider="target">
+                                                <rect key="frame" x="195" y="0.0" width="179" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="Wmf-o9-w06"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dsp-Y0-oLq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8Yp-1t-12j" secondAttribute="bottom" id="3k4-c5-AlS"/>
+                            <constraint firstItem="WXy-Rp-zpu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4yw-YG-50J"/>
+                            <constraint firstItem="WXy-Rp-zpu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Bhg-3i-U1U"/>
+                            <constraint firstItem="8Yp-1t-12j" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Fsg-5B-zDR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WXy-Rp-zpu" secondAttribute="trailing" constant="20" id="GlX-ea-bOU"/>
+                            <constraint firstItem="8Yp-1t-12j" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="HOa-O0-bS4"/>
+                            <constraint firstItem="8Yp-1t-12j" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="lVb-JS-Jfc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WXy-Rp-zpu" secondAttribute="bottom" constant="20" id="mFe-mw-B1Z"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hoW-uo-dOO"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="u69-aO-49R" id="bgS-Hh-nGc"/>
+                        <outlet property="pageControl" destination="ykD-m1-RFB" id="MRc-gZ-jST"/>
+                        <outlet property="saveButton" destination="eC6-08-eq8" id="wOp-FU-Dba"/>
+                        <outlet property="scrollView" destination="8Yp-1t-12j" id="Z9Y-pk-Dim"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="984.05797101449286" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
