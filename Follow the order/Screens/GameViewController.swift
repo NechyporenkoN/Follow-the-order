@@ -133,6 +133,7 @@ final class GameViewController: BaseViewController {
 	
 	@objc func objectTapped(_ object: BaseObject) {
 		guard isAvailablePlay else { return }
+		object.tapEffect()
 		if let object = object as? BaseObjectProtocol, let orderNumber = object.orderNumber {
 			object.animate()
 			dispatchGroup.leave()
