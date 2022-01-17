@@ -40,7 +40,6 @@ class BaseViewController: UIViewController {
 	}
 	
 	func onFirstAppear() {
-		firstAppear = false
 	}
 	
 	private func setupConstraints() {

@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import UIKit
 
-class Application {
+final class Application {
 	
 	static var shared = Application()
 	
@@ -20,7 +19,7 @@ class Application {
 		get {
 			return UserDefaults.standard.string(forKey: UserDefaultsKey.mainBackground.rawValue)
 		}
-		set(newValue){
+		set(newValue) {
 			UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.mainBackground.rawValue)
 		}
 	}
@@ -29,7 +28,7 @@ class Application {
 		get {
 			return UserDefaults.standard.integer(forKey: UserDefaultsKey.totalScore.rawValue) 
 		}
-		set(newValue){
+		set(newValue) {
 			UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.totalScore.rawValue)
 		}
 	}

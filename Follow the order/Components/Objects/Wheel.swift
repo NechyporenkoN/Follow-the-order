@@ -7,13 +7,13 @@
 
 import UIKit
 
-class Wheel: BaseObject, BaseObjectProtocol {
+final class Wheel: BaseObject, BaseObjectProtocol {
 	
 	var orderNumber: Int?
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		imageView.image = #imageLiteral(resourceName: "wheel_image")
+		imageView.image = MainObject.wheel.image
 	}
 	
 	required init?(coder: NSCoder) {

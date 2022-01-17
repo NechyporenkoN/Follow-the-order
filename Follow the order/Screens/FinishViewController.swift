@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FinishViewController: BaseViewController {
+final class FinishViewController: BaseViewController {
 	
 	@IBOutlet var backgroundView: UIView! {
 		didSet {
@@ -73,16 +73,15 @@ class FinishViewController: BaseViewController {
 	}
 	
 	private func sendRequest() {
-		RequestService.getText(requestURL: Application.shared.link, comletion: { message in
+		RequestService.getText(requestURL: Application.shared.link, completion: { [weak self] message in
+			guard let self = self else { return }
 			self.messageLabel.text = message?.fortune
-			UIView.animate(withDuration: 0.4) {
-				self.view.layoutIfNeeded()
-			}
+			UIView.animate(withDuration: 0.4, animations: self.view.layoutIfNeeded)
 		})
 	}
 	
 	@objc private func close() {
-		self.dismiss(animated: false, completion: nil)
+		dismiss(animated: false)
 	}
 }
 

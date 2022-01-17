@@ -7,13 +7,13 @@
 
 import UIKit
 
-class Star: BaseObject, BaseObjectProtocol {
+final class Star: BaseObject, BaseObjectProtocol {
 	
 	var orderNumber: Int?
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		imageView.image = #imageLiteral(resourceName: "star_image")
+		imageView.image = MainObject.star.image
 	}
 	
 	required init?(coder: NSCoder) {

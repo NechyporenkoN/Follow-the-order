@@ -7,9 +7,9 @@
 
 import Alamofire
 
-class RequestService {
+final class RequestService {
 	
-	static func getText(requestURL: String, comletion: @escaping((Message?)->())) {
+	static func getText(requestURL: String, completion: @escaping((Message?)->())) {
 		AF.request(requestURL, method: .get, encoding: URLEncoding.default).responseJSON { response in
 			guard let jsonData = response.data else { return }
 			
@@ -17,7 +17,7 @@ class RequestService {
 			
 			do {
 				let message = try decoder.decode(Message.self, from: jsonData)
-				comletion(message)
+				completion(message)
 			} catch {
 				print(error)
 			}

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameViewController: BaseViewController {
+final class GameViewController: BaseViewController {
 	
 	@IBOutlet var arenaView: UIView!
 	
@@ -141,6 +141,6 @@ class GameViewController: BaseViewController {
 	}
 	
 	@objc private func close() {
-		self.dismiss(animated: false, completion: nil)
+		dismiss(animated: false)
 	}
 }

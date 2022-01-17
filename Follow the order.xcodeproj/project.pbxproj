@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17170BC227957E5400D59370 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17170BC127957E5400D59370 /* Message.swift */; };
+		17170BC42795A29400D59370 /* MainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17170BC32795A29400D59370 /* MainObject.swift */; };
 		174C6DB62794913600BE88C5 /* Wheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174C6DB52794913600BE88C5 /* Wheel.swift */; };
 		174C6DB82794934D00BE88C5 /* Balloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174C6DB72794934D00BE88C5 /* Balloon.swift */; };
 		174C6DBA279496A200BE88C5 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174C6DB9279496A200BE88C5 /* Star.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		17170BC127957E5400D59370 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		17170BC32795A29400D59370 /* MainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainObject.swift; sourceTree = "<group>"; };
 		174C6DB52794913600BE88C5 /* Wheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wheel.swift; sourceTree = "<group>"; };
 		174C6DB72794934D00BE88C5 /* Balloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balloon.swift; sourceTree = "<group>"; };
 		174C6DB9279496A200BE88C5 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				178DCBA92794D8AB008E9724 /* Background.swift */,
+				17170BC32795A29400D59370 /* MainObject.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				17B71FD627945E3200354757 /* Apple.swift in Sources */,
 				17B71FC72794524F00354757 /* GameViewController.swift in Sources */,
 				17170BC227957E5400D59370 /* Message.swift in Sources */,
+				17170BC42795A29400D59370 /* MainObject.swift in Sources */,
 				174C6DC12794A8B900BE88C5 /* FinishViewController.swift in Sources */,
 				17B71FC0279387F600354757 /* Application.swift in Sources */,
 				17B71FAE2793848F00354757 /* MainViewController.swift in Sources */,

@@ -40,10 +40,3 @@ class BaseObject: UIControl {
 		])
 	}
 }
-
-enum MainObject: CaseIterable {
-	case apple
-	case balloon
-	case wheel
-	case star
-}

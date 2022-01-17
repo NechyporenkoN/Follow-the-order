@@ -9,8 +9,4 @@ import Foundation
 
 struct Message: Codable {
 	let fortune: String?
-	
-	enum CodingKeys: String, CodingKey {
-			 case fortune = "fortune"
-	   }
 }

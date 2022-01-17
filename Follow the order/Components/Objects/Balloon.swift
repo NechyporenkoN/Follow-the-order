@@ -7,13 +7,13 @@
 
 import UIKit
 
-class Balloon: BaseObject, BaseObjectProtocol {
+final class Balloon: BaseObject, BaseObjectProtocol {
 	
 	var orderNumber: Int?
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		imageView.image = #imageLiteral(resourceName: "balloon_image")
+		imageView.image = MainObject.balloon.image
 	}
 	
 	required init?(coder: NSCoder) {

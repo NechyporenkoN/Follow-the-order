@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: BaseViewController {
+final class SettingsViewController: BaseViewController {
 	
 	@IBOutlet var scrollView: UIScrollView!
 	
@@ -31,7 +31,7 @@ class SettingsViewController: BaseViewController {
 		
 		for index in 0..<Background.allCases.count {
 			setFrame(index: index)
-			self.imageViews[index].frame = frame
+			imageViews[index].frame = frame
 		}
 		
 		scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(Background.allCases.count)), height: scrollView.frame.size.height)
@@ -52,21 +52,21 @@ class SettingsViewController: BaseViewController {
 			imageView.image = Background.allCases[index].image
 			imageView.clipsToBounds = true
 			imageView.contentMode = .scaleAspectFill
-			self.imageViews.append(imageView)
-			self.scrollView.addSubview(imageView)
+			imageViews.append(imageView)
+			scrollView.addSubview(imageView)
 		}
 		scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(Background.allCases.count)), height: scrollView.frame.size.height)
 		scrollView.delegate = self
 	}
 	
 	@IBAction func cancelButton(_ sender: Any) {
-		self.dismiss(animated: true, completion: nil)
+		dismiss(animated: true)
 	}
 	
 	@IBAction func saveButton(_ sender: Any) {
 		Application.shared.mainBackground = Background.allCases[currentIndex].rawValue
 		updateBackground()
-		self.dismiss(animated: true, completion: nil)
+		dismiss(animated: true)
 	}
 }
 
