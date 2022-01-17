@@ -9,17 +9,14 @@ import UIKit
 
 extension UIView {
 	
-	func shake(for duration: TimeInterval = 0.35, withTranslation translation: CGFloat = 7) {
-		let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
-		notificationFeedbackGenerator.prepare()
-		let propertyAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 0.3) {
-			self.transform = CGAffineTransform(translationX: translation, y: 0)
+	func shake() {
+		let propertyAnimator = UIViewPropertyAnimator(duration: 0.4, dampingRatio: 0.3) {
+			self.transform = CGAffineTransform(translationX: 10, y: 0)
 		}
 		propertyAnimator.addAnimations({
 			self.transform = CGAffineTransform(translationX: 0, y: 0)
 		}, delayFactor: 0.2)
 		propertyAnimator.startAnimation()
-		notificationFeedbackGenerator.notificationOccurred(.error)
 	}
 	
 	func rotate() {

@@ -39,4 +39,9 @@ class BaseObject: UIControl {
 			imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
 		])
 	}
+	
+	func tapEffect() {
+		let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+		notificationFeedbackGenerator.notificationOccurred(.warning)
+	}
 }
